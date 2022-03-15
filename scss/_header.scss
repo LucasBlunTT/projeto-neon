@@ -2,10 +2,10 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  background: #0073ce;
   width: 100%;
   height: 8.8rem;
   display: flex;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 
   .container {
     @include flex(row, center, space-between);
@@ -29,12 +29,12 @@ header {
           font-size: 1.6rem;
           line-height: 125%;
           color: #ffffff;
-          transition: color .3s;
-          &:hover{
+          transition: color 0.3s;
+          &:hover {
             color: $brand-yellow;
           }
         }
-      }    
+      }
     }
   }
 }
