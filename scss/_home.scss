@@ -3,9 +3,11 @@
   height: 78.6rem;
   background: url("../img/bg-hero.svg") no-repeat center center;
   padding-top: 17.5rem;
+
   .container {
     @include flex(row, flex-start, space-between);
   }
+
   .text {
     width: 100%;
     max-width: 68.4rem;
@@ -29,21 +31,22 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       li {
         display: flex;
         align-items: center;
+
         .icon {
           width: 4.8rem;
           height: 4.8rem;
-          background: linear-gradient(
-            180deg,
-            rgba(53, 203, 226, 0.4) 0%,
-            rgba(53, 202, 226, 0) 100%
-          );
+          background: linear-gradient(180deg,
+              rgba(53, 203, 226, 0.4) 0%,
+              rgba(53, 202, 226, 0) 100%);
           border-radius: 50%;
           @include flex(row, center, center);
           margin-right: 1.2rem;
         }
+
         span {
           font-weight: 400;
           font-size: 1.8rem;
@@ -53,10 +56,12 @@
       }
     }
   }
+
   .area-image {
     width: 100%;
     max-width: 70.6rem;
     margin-right: -17.4rem;
+
     h2 {
       margin-bottom: 6.7rem;
       text-align: center;
@@ -64,11 +69,13 @@
       opacity: 0.4;
       font-weight: 600;
     }
+
     .image {
       position: relative;
       top: 3.5rem;
       width: 100%;
       height: 54.1rem;
+
       img {
         position: absolute;
       }
@@ -84,9 +91,157 @@
         right: 8.6rem;
         z-index: 1;
       }
+
       .circle {
         top: 2.8rem;
         right: 4.3rem;
+      }
+    }
+  }
+}
+
+.s-card-neon {
+  padding-top: 12.9rem;
+
+  .container {
+    @include flex(row, flex-start, space-between);
+  }
+
+  .left-area {
+    width: 100%;
+    max-width: 27.7rem;
+
+    .ilustra-mockup {
+      position: relative;
+      width: 100%;
+      max-width: 27.7rem;
+      margin-bottom: 12.9rem;
+
+      .circle {
+        position: absolute;
+        z-index: -1;
+        top: 8.7rem;
+        left: -21.4rem;
+        max-width: 37.7rem;
+      }
+    }
+
+    .text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .icon {
+        position: relative;
+
+        &:before {
+          content: "";
+          width: 5px;
+          height: 83px;
+          background: url("../img/points.svg") no-repeat center center;
+          position: absolute;
+          top: -104px;
+          left: 50%;
+          margin-left: -2.5px;
+        }
+      }
+
+      .info-txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          margin-top: 3.6rem;
+          text-align: center;
+          color: $gray-600;
+        }
+
+        p {
+          text-align: center;
+          line-height: 150%;
+          color: $gray-400;
+          opacity: 0.8;
+          margin-bottom: 2.6rem;
+        }
+
+        ul {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 2.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right-area {
+    width: 100%;
+    max-width: 80rem;
+
+    .main-text {
+      margin-bottom: 14.4rem;
+
+      h2 {
+        max-width: 48.8rem;
+        color: $gray-600;
+        margin-bottom: 4.9rem;
+      }
+
+      ul {
+        margin-bottom: 3.2rem;
+
+        li {
+          @include flex(row, center, space-between);
+          border-bottom: 1px solid rgba(225, 224, 231, 0.9);
+          padding: 3.3rem 0px;
+
+          &:first-child {
+            padding-top: 0;
+          }
+
+          .info {
+            display: flex;
+            align-items: center;
+
+            .txt {
+              margin-left: 4.3rem;
+
+              h3 {
+                color: $gray-400;
+              }
+
+              p {
+                font-size: 24px;
+                line-height: 150%;
+                color: $gray-400;
+              }
+            }
+          }
+        }
+      }
+
+      .btn {
+        position: relative;
+        display: inline-block;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 112%;
+        letter-spacing: -0.5px;
+        color: $brand-blue;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: -10.8px;
+          width: 10px;
+          height: 3px;
+          background-color: $brand-yellow;
+        }
       }
     }
   }

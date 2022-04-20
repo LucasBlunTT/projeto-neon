@@ -5,9 +5,11 @@
   background-color: rgba(241, 240, 245, 0.55);
   border-radius: 8px;
   padding: 3.7rem 3.2rem 2.3rem 3.2rem;
+
   .user {
     margin-bottom: 2.1rem;
     @include flex(row, center, space-between);
+
     strong {
       font-family: "Poppins", sans-serif;
       font-weight: 600;
