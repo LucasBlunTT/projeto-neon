@@ -214,9 +214,10 @@
               }
 
               p {
-                font-size: 24px;
+                font-weight: 40rem;
+                font-size: 1.8rem;
                 line-height: 150%;
-                color: $gray-400;
+                color: $gray-300;
               }
             }
           }
@@ -237,11 +238,60 @@
           content: "";
           position: absolute;
           bottom: 0;
-          right: -10.8px;
+          right: -1.8rem;
           width: 10px;
           height: 3px;
           background-color: $brand-yellow;
         }
+      }
+    }
+
+    .box-card {
+      width: 100%;
+      height: 41rem;
+      background: url("../img/bg-box-card-neon.svg") no-repeat center center;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 5.9rem;
+
+      .text {
+        width: 100%;
+        max-width: 38rem;
+
+        h2 {
+          color: #ffffff;
+          margin-bottom: 1.1rem;
+        }
+
+        h3 {
+          color: #ffffff;
+          max-width: 32.7rem;
+          margin-bottom: 0.8rem;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 150%;
+          color: #ffffff;
+          margin-bottom: 3.1rem;
+        }
+
+        .btns {
+          display: flex;
+          align-items: center;
+
+          button {
+            &:not(:first-child) {
+              margin-left: 1.6rem;
+            }
+          }
+        }
+      }
+
+      .image {
+        margin-right: -3.1rem;
       }
     }
   }
