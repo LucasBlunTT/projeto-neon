@@ -296,3 +296,45 @@
     }
   }
 }
+
+.s-depoimentos {
+  padding-top: 13.4rem;
+
+  .top {
+    @include flex (row, flex-end, space-between);
+    margin-bottom: 40px;
+
+    h2 {
+      span {
+        display: block;
+        color: $gray-200;
+        margin-bottom: 1.4rem;
+      }
+
+    }
+
+    .swiper-pagination {
+      position: relative;
+
+      .swiper-pagination-bullet {
+        background: $brand-yellow;
+        opacity: 0.3;
+        border-radius: 12px;
+        transition: all .3s;
+
+        &:not(:first-child) {
+          margin-left: 0.4rem;
+        }
+
+        &-active {
+          opacity: 1;
+          border-radius: 17.23px;
+        }
+      }
+    }
+  }
+
+  .slide-depoimentos {
+    overflow: hidden;
+  }
+}
