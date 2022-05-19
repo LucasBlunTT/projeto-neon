@@ -40,4 +40,50 @@ header {
       }
     }
   }
+
+  .btn-mobile {
+    display: none;
+  }
+
+  @include responsive (1085px) {
+    nav {
+      ul {
+        margin-right: 3rem;
+
+        li {
+          &:not(:first-child) {
+            margin-left: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive (991px) {
+    .logo {
+      max-width: 10.8rem;
+    }
+
+    nav {
+      ul {
+        display: none;
+      }
+    }
+
+    .btn-mobile {
+      display: block;
+      margin-left: 4rem;
+    }
+
+  }
+
+  @include responsive (480px) {
+    height: 7.3rem;
+
+    nav {
+      .btn-secondary {
+        display: none;
+      }
+    }
+  }
 }
