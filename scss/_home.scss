@@ -84,20 +84,207 @@
         top: 4.1rem;
         left: 0;
         z-index: 2;
+        max-width: 43.5rem;
       }
 
       .card-back {
         bottom: 4.6rem;
         right: 8.6rem;
         z-index: 1;
+        max-width: 35.2rem;
       }
 
       .circle {
+        max-width: 55.3rem;
         top: 2.8rem;
         right: 4.3rem;
       }
     }
   }
+
+  @include responsive (1440px) {
+    .area-image {
+      margin-right: -13.4rem;
+    }
+  }
+
+  @include responsive (1366px) {
+    .area-image {
+      margin-right: -8rem;
+
+      .image {
+        .card-back {
+          right: 4rem;
+        }
+      }
+    }
+  }
+
+  @include responsive (1050px) {
+    padding-top: 14.5rem;
+    height: 65.6rem;
+
+    .text {
+      ul {
+        margin-top: 4.5rem;
+      }
+    }
+
+    .area-image {
+      margin-right: -10px;
+
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+
+      .image {
+        height: 45rem;
+
+        .card-front {
+          max-width: 35rem;
+          top: 8rem;
+        }
+
+        .card-back {
+          max-width: 29rem;
+          bottom: 0;
+        }
+
+        .circle {
+          max-width: 46rem;
+        }
+      }
+    }
+  }
+
+  @include responsive (991px) {
+    height: 89.1rem;
+    background-size: cover;
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text {
+      margin-bottom: 5rem;
+      max-width: 68.5rem;
+      @include flex (column, center, center);
+
+      h3 {
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 2.6rem;
+      }
+
+      ul {
+        margin-top: 3.9rem;
+      }
+    }
+
+    .area-image {
+      h2 {
+        margin-bottom: 1.9rem;
+      }
+
+      .image {
+        max-width: 51.1rem;
+        height: 42.4rem;
+        margin: 0 auto;
+        top: 0;
+
+        .circle {
+          max-width: 42.9rem;
+          top: 0;
+          right: 1.3rem;
+        }
+
+        .card-front {
+          max-width: 34rem;
+          left: 0;
+          right: 3.5rem;
+        }
+
+        .card-back {
+          max-width: 27.4rem;
+        }
+      }
+    }
+  }
+
+  @include responsive (480px) {
+    padding-top: 12.4rem;
+    height: 73.9rem;
+
+    .text {
+      h3 {
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        font-size: 32px;
+        line-height: 112%;
+        margin-bottom: 3.7rem;
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 27.5rem;
+
+        li {
+          &:not(:last-child) {
+            margin-bottom: 1.7rem;
+          }
+
+          .icon {
+            width: 2rem;
+            height: auto;
+            background-color: transparent;
+          }
+
+          span {
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .area-image {
+      h2 {
+        display: none;
+      }
+
+      .image {
+        max-width: 30.5rem;
+        height: 24.8rem;
+
+        .circle {
+          max-width: 26.7rem;
+          right: 0;
+        }
+
+        .card-front {
+          max-width: 21.1rem;
+          top: 2.9rem;
+        }
+
+        .card-back {
+          max-width: 17rem;
+          bottom: 0;
+          right: 0.6rem;
+        }
+      }
+    }
+  }
+
 }
 
 .s-card-neon {
@@ -410,15 +597,18 @@
 
     img {
       position: absolute;
+
       &.mockup-01 {
         left: 0;
         bottom: 4.7rem;
       }
+
       &.mockup-02 {
         top: 3px;
         left: 25.8rem;
       }
-      &.circle{
+
+      &.circle {
         right: 0;
         bottom: 0;
       }
