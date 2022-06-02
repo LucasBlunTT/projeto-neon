@@ -25,4 +25,8 @@
     line-height: 150%;
     color: $gray-400;
   }
+
+  @include responsive (480px) {
+    height: 25.3rem;
+  }
 }

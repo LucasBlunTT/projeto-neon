@@ -751,6 +751,46 @@
   .slide-depoimentos {
     overflow: hidden;
   }
+
+  @include responsive(991px) {
+    .top {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 5.1rem;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 5.1rem;
+      }
+    }
+  }
+
+  @include responsive(480px) {
+    padding-top: 7.6rem;
+
+    .container {
+      padding: 0;
+    }
+
+    .top {
+      margin-bottom: 3.4rem;
+
+      h2 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        max-width: 28.5rem;
+        margin-bottom: 3.4rem;
+
+        span {
+          margin-bottom: 1.1rem;
+        }
+      }
+    }
+
+    .slide-depoimentos {
+      padding: 0px 2rem;
+    }
+  }
 }
 
 .s-conta-digital {
