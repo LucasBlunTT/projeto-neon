@@ -16,7 +16,7 @@ footer {
                 font-size: 1.4rem;
                 line-height: 125%;
                 text-align: right;
-                color: #FFFFFF;
+                color: #ffffff;
                 opacity: 0.7;
             }
 
@@ -47,11 +47,11 @@ footer {
 
             .item {
                 strong {
-                    font-family: 'Poppins', sans-serif;
+                    font-family: "Poppins", sans-serif;
                     font-weight: 600;
                     font-size: 1.6rem;
                     line-height: 24px;
-                    color: #FFFFFF;
+                    color: #ffffff;
                     display: inline-block;
                     margin-bottom: 2.5rem;
                 }
@@ -65,7 +65,7 @@ footer {
                         a {
                             font-size: 1.4rem;
                             line-height: 1.7rem;
-                            color: #FFFFFF;
+                            color: #ffffff;
                             opacity: 0.7;
                         }
                     }
@@ -99,16 +99,15 @@ footer {
                         font-weight: bold;
                         font-size: 1.4rem;
                         line-height: 150%;
-                        color: #FFFFFF;
+                        color: #ffffff;
                     }
 
                     span {
                         display: block;
                         font-size: 1.4rem;
                         line-height: 150%;
-                        color: #FFFFFF;
+                        color: #ffffff;
                     }
-
                 }
             }
         }
@@ -119,7 +118,8 @@ footer {
         align-items: flex-start;
         border-bottom: 4px solid $brand-yellow;
         padding-bottom: 3.4rem;
-        .icon{
+
+        .icon {
             font-size: 1.8rem;
         }
 
@@ -129,8 +129,121 @@ footer {
             margin-left: 2.5rem;
             font-size: 1.4rem;
             line-height: 150%;
-            color: #FFFFFF;
+            color: #ffffff;
             opacity: 0.8;
+        }
+    }
+
+    @include responsive(1050px) {
+        .main {
+            nav {
+                max-width: 76rem;
+            }
+        }
+    }
+
+    @include responsive(991px) {
+        .main {
+            width: 100%;
+            position: relative;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 3.6rem;
+
+            nav {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+
+                .item {
+                    width: 33%;
+                    margin-bottom: 5rem;
+                }
+            }
+
+            .btns {
+                position: absolute;
+                bottom: 14rem;
+                right: 0;
+            }
+        }
+
+        .msg {
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                margin-left: 0;
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    @include responsive(600px) {
+        .main {
+            margin-bottom: 3rem;
+
+            .btns {
+                max-width: 25rem;
+
+                button {
+                    img {
+                        display: none;
+                    }
+
+                    .info {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(480px) {
+        .top {
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 4.3rem;
+            margin-bottom: 5.2rem;
+
+            .share {
+                flex-direction: column;
+                margin-top: 3.2rem;
+
+                ul {
+                    margin-left: 0;
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        .main {
+            nav {
+                .item {
+                    width: 50%;
+                    margin-bottom: 5.3rem;
+                }
+            }
+
+            .btns {
+                bottom: 0;
+                position: relative;
+                max-width: 100%;
+
+                button {
+                    padding-left: 0;
+                    justify-content: center;
+
+                    .info {
+                        strong,
+                        span {
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
         }
     }
 }

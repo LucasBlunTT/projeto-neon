@@ -45,7 +45,7 @@ header {
     display: none;
   }
 
-  @include responsive (1085px) {
+  @include responsive(1085px) {
     nav {
       ul {
         margin-right: 3rem;
@@ -59,7 +59,7 @@ header {
     }
   }
 
-  @include responsive (991px) {
+  @include responsive(991px) {
     .logo {
       max-width: 10.8rem;
     }
@@ -74,10 +74,9 @@ header {
       display: block;
       margin-left: 4rem;
     }
-
   }
 
-  @include responsive (480px) {
+  @include responsive(480px) {
     height: 7.3rem;
 
     nav {

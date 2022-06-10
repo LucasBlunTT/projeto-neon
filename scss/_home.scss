@@ -39,9 +39,7 @@
         .icon {
           width: 4.8rem;
           height: 4.8rem;
-          background: linear-gradient(180deg,
-              rgba(53, 203, 226, 0.4) 0%,
-              rgba(53, 202, 226, 0) 100%);
+          background: linear-gradient(180deg, rgba(53, 203, 226, 0.4) 0%, rgba(53, 202, 226, 0) 100%);
           border-radius: 50%;
           @include flex(row, center, center);
           margin-right: 1.2rem;
@@ -85,6 +83,7 @@
         left: 0;
         z-index: 2;
         max-width: 43.5rem;
+        animation: floating 6s infinite;
       }
 
       .card-back {
@@ -92,6 +91,7 @@
         right: 8.6rem;
         z-index: 1;
         max-width: 35.2rem;
+        animation: floating 8s infinite;
       }
 
       .circle {
@@ -102,13 +102,13 @@
     }
   }
 
-  @include responsive (1440px) {
+  @include responsive(1440px) {
     .area-image {
       margin-right: -13.4rem;
     }
   }
 
-  @include responsive (1366px) {
+  @include responsive(1366px) {
     .area-image {
       margin-right: -8rem;
 
@@ -120,7 +120,7 @@
     }
   }
 
-  @include responsive (1050px) {
+  @include responsive(1050px) {
     padding-top: 14.5rem;
     height: 65.6rem;
 
@@ -157,7 +157,7 @@
     }
   }
 
-  @include responsive (991px) {
+  @include responsive(991px) {
     height: 89.1rem;
     background-size: cover;
 
@@ -169,7 +169,7 @@
     .text {
       margin-bottom: 5rem;
       max-width: 68.5rem;
-      @include flex (column, center, center);
+      @include flex(column, center, center);
 
       h3 {
         text-align: center;
@@ -215,7 +215,7 @@
     }
   }
 
-  @include responsive (480px) {
+  @include responsive(480px) {
     padding-top: 12.4rem;
     height: 73.9rem;
 
@@ -284,7 +284,6 @@
       }
     }
   }
-
 }
 
 .s-card-neon {
@@ -483,11 +482,11 @@
     }
   }
 
-  @include responsive (1200px) {
+  @include responsive(1200px) {
     .left-area {
       .ilustra-mockup {
         .circle {
-          display: none
+          display: none;
         }
       }
     }
@@ -511,13 +510,13 @@
         padding-left: 3.5rem;
 
         .image {
-          margin-right: -1rem
+          margin-right: -1rem;
         }
       }
     }
   }
 
-  @include responsive (991px) {
+  @include responsive(991px) {
     .container {
       flex-direction: column-reverse;
     }
@@ -571,10 +570,9 @@
         }
       }
     }
-
   }
 
-  @include responsive (600px) {
+  @include responsive(600px) {
     padding-top: 16.9rem;
 
     .right-area {
@@ -618,7 +616,7 @@
       content: "";
       width: 100%;
       height: 214px;
-      background: linear-gradient(180deg, #F7F7FA 0%, rgba(247, 247, 250, 0) 100%);
+      background: linear-gradient(180deg, #f7f7fa 0%, rgba(247, 247, 250, 0) 100%);
       position: absolute;
       bottom: 0;
       left: 0;
@@ -688,7 +686,6 @@
         }
 
         .text {
-
           p {
             max-width: 25.3rem;
             margin-bottom: 3.4rem;
@@ -707,14 +704,13 @@
       }
     }
   }
-
 }
 
 .s-depoimentos {
   padding-top: 13.4rem;
 
   .top {
-    @include flex (row, flex-end, space-between);
+    @include flex(row, flex-end, space-between);
     margin-bottom: 40px;
 
     h2 {
@@ -723,7 +719,6 @@
         color: $gray-200;
         margin-bottom: 1.4rem;
       }
-
     }
 
     .swiper-pagination {
@@ -734,7 +729,7 @@
         background: $brand-yellow;
         opacity: 0.3;
         border-radius: 12px;
-        transition: all .3s;
+        transition: all 0.3s;
 
         &:not(:first-child) {
           margin-left: 0.4rem;
@@ -867,17 +862,158 @@
       &.mockup-01 {
         left: 0;
         bottom: 4.7rem;
+        z-index: 2;
       }
 
       &.mockup-02 {
         top: 3px;
         left: 25.8rem;
+        z-index: 2;
       }
 
       &.circle {
         right: 0;
         bottom: 0;
+        z-index: 0;
       }
     }
+  }
+
+  @include responsive(1200px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text {
+      max-width: 75%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+        max-width: 80%;
+      }
+    }
+
+    .image {
+      margin-right: 0;
+      left: 0;
+      margin-top: 5rem;
+    }
+  }
+
+  @include responsive(900px) {
+    padding-top: 8.6rem;
+    padding-bottom: 8.1rem;
+
+    .text {
+      max-width: 100%;
+    }
+
+    .image {
+      max-width: 582px;
+      height: 63.3rem;
+
+      img {
+        &.circle {
+          width: 100%;
+        }
+
+        &.mockup-01 {
+          z-index: 2;
+        }
+
+        &.mockup-02 {
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  @include responsive(480px) {
+    padding-top: 5.7rem;
+    padding-bottom: 7.2rem;
+
+    .text {
+      h2 {
+        font-size: 2.6rem;
+        font-weight: 600;
+        min-width: 100%;
+        margin-bottom: 3.9rem;
+
+        span {
+          font-size: 2.4rem;
+        }
+      }
+
+      ul {
+        li {
+          flex-direction: column;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-bottom: 5.6rem;
+          }
+
+          .icon {
+            margin-right: 0;
+            margin-bottom: 1.6rem;
+          }
+
+          .info {
+            h4 {
+              text-align: center;
+              max-width: 28rem;
+            }
+
+            p {
+              text-align: center;
+              font-style: 1.4rem;
+              max-width: 21rem;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+
+    .image {
+      min-width: 35.7rem;
+      height: 46.9rem;
+
+      img {
+        &.mockup-01,
+        &.mockup-02 {
+          max-width: 16.8rem;
+        }
+
+        &.mockup-01 {
+          bottom: initial;
+          top: 5.8rem;
+        }
+
+        &.mockup-02 {
+          left: initial;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  66% {
+    transform: translateY(-15);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
