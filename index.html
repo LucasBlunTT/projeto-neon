@@ -36,15 +36,58 @@
 </head>
 
 <body>
-  <header>
+  <header id="js-header">
     <div class="container">
       <a href="" class="logo">
-        <img src="img/logo.svg" alt="Logo Neon" />
+
       </a>
       <nav>
+        <div class="dropdown js-dropdown">
+          <div class="item">
+            <strong>
+              Cartão de crédito
+            </strong>
+            <p>
+              Cartão de crédito sem anuidade
+            </p>
+          </div>
+          <div class="item">
+            <strong>
+              Cartão pré-pago
+            </strong>
+            <p>
+              Cartão de débito internacional Neon
+            </p>
+          </div>
+          <div class="item">
+            <strong>
+              Neon Mais
+            </strong>
+            <p>
+              4 saques grátis para quem compra com a Neon
+            </p>
+          </div>
+          <div class="item">
+            <strong>
+              Investimentos
+            </strong>
+            <p>
+              A evolução da poupança
+            </p>
+          </div>
+          <div class="item">
+            <strong>
+              Empréstimo pessoal
+            </strong>
+            <p>
+              Faça uma simulação de empréstimo pessoal
+            </p>
+          </div>
+        </div>
+
         <ul>
-          <li>
-            <a href="">Produtos</a>
+          <li class="js-btn-dropdown">
+            <a href="">Produtos Neon</a>
           </li>
           <li>
             <a href="">Conta digital PJ</a>
@@ -61,10 +104,36 @@
         </ul>
         <button class="btn-secondary white">Abra sua conta digital</button>
 
-        <button class="btn-mobile"><img src="img/btn-mobile.svg" alt=""></button>
+        <button class="btn-mobile" id="js-btn-menu-mobile"><img src="img/btn-mobile.svg" alt=""></button>
       </nav>
     </div>
   </header>
+
+  <div class="menu-mobile">
+    <div class="overlay js-overlay">
+
+    </div>
+    <aside>
+      <img src="img/logo-neon-color.svg" class="logo" alt="">
+      <ul>
+        <li class="js-btn-dropdown">
+          <a href="">Produtos Neon</a>
+        </li>
+        <li>
+          <a href="">Conta digital PJ</a>
+        </li>
+        <li>
+          <a href="">Quem somos</a>
+        </li>
+        <li>
+          <a href="">Blog</a>
+        </li>
+        <li>
+          <a href="">Ajuda</a>
+        </li>
+      </ul>
+    </aside>
+  </div>
 
   <section class="s-hero">
     <div class="container">
@@ -468,6 +537,8 @@
       once: true
     });
   </script>
+
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
